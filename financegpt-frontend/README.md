@@ -33,17 +33,6 @@ The app will be available at [http://localhost:8080](http://localhost:8080) by d
 ### Environment Variables
 - The frontend expects the backend API to be available at `http://localhost:8000` by default. You can override this by setting the `VITE_API_URL` environment variable.
 
-### Build for Production
-```sh
-npm run build
-```
-The production build will be in the `dist/` folder.
-
-### Linting
-```sh
-npm run lint
-```
-
 ## Technologies Used
 - React
 - TypeScript
