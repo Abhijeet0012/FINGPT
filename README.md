@@ -32,7 +32,6 @@ Agents can be extended or replaced, making the system adaptable to new data sour
 - **Frontend:** React, TypeScript, Vite, shadcn-ui, Tailwind CSS
 - **Backend:** FastAPI, SQLAlchemy, OpenAI API, PostgreSQL, LangChain, ChromaDB
 - **Authentication:** JWT (JSON Web Tokens)
-- **Document Processing:** LangChain, PyPDF
 
 ## Getting Started
 - See `financegpt-frontend/README.md` for frontend setup and usage.

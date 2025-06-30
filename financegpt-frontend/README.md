@@ -18,7 +18,7 @@ FinanceGPT is an AI-powered financial assistant platform that helps users discov
 
 ```sh
 # Clone the repository
- git clone <YOUR_GIT_URL>
+ git clone https://github.com/Abhijeet0012/FINGPT.git
  cd financegpt-frontend
 
 # Install dependencies
