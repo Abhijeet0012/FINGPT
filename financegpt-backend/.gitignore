@@ -122,7 +122,7 @@ venv.bak/
 *.sqlite3
 
 # PDF and binary data
-*.pdf
+# *.pdf
 *.bin
 
 # Docker
