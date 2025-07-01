@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Send, Sparkles } from 'lucide-react';
 import AnalyzingAnimation from './AnalyzingAnimation';
-import { getApiUrl } from '@/config/api';
+import { getApiUrl, getWsUrl } from '@/config/api';
 import { toast } from '@/components/ui/use-toast';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -69,10 +69,8 @@ const ChatWindow = ({ username }: ChatWindowProps) => {
     let aiMessageId = messages.length + 2;
     let aiRecommendations: string[] = [];
     try {
-      // Always use ws://localhost:8000/ws/stream for chat
-      const wsUrl = window.location.protocol === 'https:'
-        ? 'wss://localhost:8000/ws/stream'
-        : 'ws://localhost:8000/ws/stream';
+      // Use getWsUrl helper for WebSocket URL
+      const wsUrl = getWsUrl('WS_STREAM');
       ws = new WebSocket(wsUrl);
       ws.onopen = () => {
         const token = localStorage.getItem('token');
