@@ -25,5 +25,22 @@ CREATE TABLE financial_products (
     tenure_months INT, -- For FDs, Insurance
     eligibility VARCHAR(255)
 );
+
+The Jio Finance financial_products table schema contains the following columns:
+1. id: A unique identifier for each product that auto-increments (SERIAL PRIMARY KEY)
+2. name: Product name, required field
+3. type: Product category, required field, includes:
+   - Fixed Deposit
+   - Mutual Fund
+   - Insurance
+   - Credit Card
+4. interest_rate: Stores rate information for Fixed Deposits and Credit Cards
+5. min_amount: Minimum investment/credit amount, required field, stores decimal numbers with 2 decimal places
+6. risk_level: Required field, indicates risk as:
+   - Low
+   - Medium
+   - High
+7. tenure_months: Integer field for duration, mainly used for Fixed Deposits and Insurance products
+8. eligibility: Stores eligibility criteria
 """
 

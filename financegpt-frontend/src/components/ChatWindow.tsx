@@ -6,6 +6,7 @@ import AnalyzingAnimation from './AnalyzingAnimation';
 import { getApiUrl } from '@/config/api';
 import { toast } from '@/components/ui/use-toast';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Message {
   id: number;
@@ -219,7 +220,14 @@ const ChatWindow = ({ username }: ChatWindowProps) => {
                     {message.isUser ? (
                       message.text
                     ) : (
-                      <ReactMarkdown>{message.text}</ReactMarkdown>
+                      <ReactMarkdown 
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          table: ({node, ...props}) => (
+                            <table className="markdown-table" {...props} />
+                          ),
+                        }}
+                      >{message.text}</ReactMarkdown>
                     )}
                   </p>
                 </div>

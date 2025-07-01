@@ -103,3 +103,27 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Markdown Table Styling */
+.markdown-table {
+  @apply w-full border-collapse rounded-lg overflow-hidden my-4 text-sm;
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+}
+.markdown-table th, .markdown-table td {
+  @apply border px-4 py-2;
+  border-color: hsl(var(--border));
+}
+.markdown-table th {
+  @apply bg-muted font-semibold text-left;
+  background-color: hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
+}
+.markdown-table tr:nth-child(even) {
+  @apply bg-muted/50;
+  background-color: hsl(var(--muted) / 0.5);
+}
+.markdown-table caption {
+  @apply text-muted-foreground text-xs mt-2;
+  color: hsl(var(--muted-foreground));
+}
