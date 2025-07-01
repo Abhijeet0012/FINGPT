@@ -139,7 +139,7 @@ Thumbs.db
 chroma_db/
 
 # Ignore data
-/data/
+# /data/
 
 # Ignore Dockerfile if not needed
 # Dockerfile 
